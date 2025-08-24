@@ -1,4 +1,4 @@
-# train-grpc
+# train-grpc-py
 
 gRPC Project.
 
