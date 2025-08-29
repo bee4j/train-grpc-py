@@ -2,35 +2,21 @@
 
 gRPC Project.
 
-## 初始化代码库
-    - 在Github或Gitee创建一个空项目
-    - 在Pycharm社区版下载这个项目
-    
-## 基础环境
-    - Python 3.12.6
-    - 官网文档： https://www.python.org 
-    - 验证安装： 控制台输入命令 Python
-    - 退出命令： 控制台输入命令 exit(0)
-    
-## 环境隔离
-    - 创建虚拟环境：python -m venv .venv
-    - 激活虚拟环境：
-        - MacOS环境：source .venv/bin/activate
-        - Win10环境：.venv\Scripts\activate
-            - 操作显示：(.venv) PS D:\WorkSpace\PycharmProjects\bee4j\train-grpc-py>
-    - 退出虚拟环境：deactivate
-    - 删除虚拟环境：只需删除创建它的文件夹即可?
+## Protocol Buffers, 简称 Protobuf，protoc编译器，将.proto文件编译成特定语言代码，以便在代码中方便地序列化和反序列化数据
+1.1 官方下载地址 https://github.com/protocolbuffers/protobuf/releases
+1.2 配置环境变量 
+1.3 验证环境变量 输入命令 protoc --version
+1.4 安装依赖工具 pip install grpcio grpcio-tools
 
-## 不同IDE路径区别
-    - VSCode  默认路径是项目的根路径
-    - PyCharm 默认路径是当前文件路径
-    
-## 安装依赖
-    - pip install --upgrade pip
-    - pip install --upgrade pip setuptools
-    - pip install -r requirements.txt
-    - 如不能正确安装dotenv，可以尝试：- pip install python-dotenv
+## 创建gRPC接口的两种方式
+2.1 输入命令
+2.2 执行脚本
 
-## 依赖清单
-    - pip list
-    - pip freeze > requirements.txt
+## gRPC服务接口
+3.1 编写.proto文件，定义服务和消息类型
+3.2	编译Py代码，在项目根目录输入命令 python -m grpc_tools.protoc -I./protos --python_out=./src/generated --pyi_out=./src/generated --grpc_python_out=./src/generated ./protos/user_service.proto
+3.3 编写gRPC接口内部逻辑
+3.4	启动gRPC服务
+3.5	测试gRPC服务
+
+## gRPC服务调用
