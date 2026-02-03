@@ -24,7 +24,7 @@
     - PyCharm 默认路径是当前文件路径
     
 ## 安装依赖
-    - pip install --upgrade pip
+    - python.exe -m pip install --upgrade pip
     - pip install --upgrade pip setuptools
     - pip install -r requirements.txt
     - 如不能正确安装dotenv，可以尝试：- pip install python-dotenv
